@@ -1,0 +1,25 @@
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  width: 46%;
+  z-index: 1000;
+  pointer-events: none; /* Preventing the overlay from intercepting clicks */
+}
+
+.fade-in-slide-down {
+  animation: fadeInSlideDown 0.5s both;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
