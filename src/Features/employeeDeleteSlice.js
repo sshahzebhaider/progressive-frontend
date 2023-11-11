@@ -15,7 +15,7 @@ export const deleteEmployee = createAsyncThunk(
           Authorization: `Bearer ${employeeInfo.token}`,
         },
       };
-      await axios.delete(`/api/admin/${id}`, config);
+      await axios.delete(`https://progressive-backend.vercel.app/` +`/api/admin/${id}`, config);
     } catch (error) {
       const newError =
         error.response && error.response.data.message
