@@ -50,7 +50,7 @@ const LoginScreen = () => {
         boxShadow="md"
         textAlign="center"
       >
-        <Heading as="h1" marginBottom="5rem" color="#6ea7dc">
+        <Heading as="h1" marginBottom="2rem" color="#6ea7dc">
           Progressive International
         </Heading>
         <FormControl marginBottom="1rem">
