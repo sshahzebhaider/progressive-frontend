@@ -15,7 +15,7 @@ export const updateUserProfile = createAsyncThunk(
           Authorization: `Bearer ${employeeInfo.token}`,
         },
       };
-      const { data } = await axios.put(`https://progressive-backend.vercel.app/` +`/api/employee/profile`, user, config);
+      const { data } = await axios.put(`https://progressive-backend.vercel.app` +`/api/employee/profile`, user, config);
 
       return data;
     } catch (error) {
