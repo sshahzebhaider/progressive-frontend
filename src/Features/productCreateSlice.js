@@ -15,7 +15,7 @@ export const createProduct = createAsyncThunk(
           Authorization: `Bearer ${employeeInfo.token}`,
         },
       };
-      const { data } = await axios.post(`https://progressive-backend.vercel.app/` +`/api/products`, {}, config);
+      const { data } = await axios.post(`https://progressive-backend.vercel.app` +`/api/products`, {}, config);
       return data;
     } catch (error) {
       const newError =
