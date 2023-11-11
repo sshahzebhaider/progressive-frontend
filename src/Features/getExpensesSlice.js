@@ -11,7 +11,7 @@ export const getExpenses = createAsyncThunk(
   'expenses/getExpenses',
   async () => {
     try {
-      const { data } = await axios.get(`https://progressive-backend.vercel.app/` +'/api/admin/expenses');
+      const { data } = await axios.get(`https://progressive-backend.vercel.app` +'/api/admin/expenses');
       return data;
     } catch (error) {
       return error;
