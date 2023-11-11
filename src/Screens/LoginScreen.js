@@ -41,7 +41,7 @@ const LoginScreen = () => {
   }, [employeeInfo, navigate, redirect]);
 
   return (
-    <Center height="100vh" bg="teal.500">
+    <Center height="100vh" bg="#6ea7dc">
       <Box
         width="300px"
         p="6"
@@ -50,7 +50,7 @@ const LoginScreen = () => {
         boxShadow="md"
         textAlign="center"
       >
-        <Heading as="h1" marginBottom="5rem" color="teal.800">
+        <Heading as="h1" marginBottom="5rem" color="#6ea7dc">
           Progressive International
         </Heading>
         <FormControl marginBottom="1rem">
