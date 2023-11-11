@@ -11,7 +11,7 @@ export const getProductsSoldList = createAsyncThunk(
   'getSoldProductList',
   async () => {
     try {
-      const { data } = await axios.get(`/api/products/soldProducts`);
+      const { data } = await axios.get(`https://progressive-backend.vercel.app/` +`/api/products/soldProducts`);
       return data;
     } catch (error) {
       return error;
