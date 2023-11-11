@@ -17,7 +17,7 @@ export const deleteProduct = createAsyncThunk(
           Authorization: `Bearer ${employeeInfo.token}`,
         },
       };
-      await axios.delete(`https://progressive-backend.vercel.app/` +`/api/products/${id}`, config);
+      await axios.delete(`https://progressive-backend.vercel.app` +`/api/products/${id}`, config);
     } catch (error) {
       const newError =
         error.response && error.response.data.message
