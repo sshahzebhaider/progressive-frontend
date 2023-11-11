@@ -13,7 +13,7 @@ export const login = createAsyncThunk(
         },
       };
       const { data } = await axios.post(
-        `/api/employee/login`,
+        `https://url.vercel.app` +`/api/employee/login`,
         { email, password },
         config
       );
