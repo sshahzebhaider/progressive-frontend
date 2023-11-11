@@ -9,7 +9,7 @@ const initialState = {
 
 export const getEmployeeList = createAsyncThunk('getEmployeeList', async () => {
   try {
-    const { data } = await axios.get(`/api/admin`);
+    const { data } = await axios.get(`https://progressive-backend.vercel.app/` +`/api/admin`);
     return data;
   } catch (error) {
     return error;
