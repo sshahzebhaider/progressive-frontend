@@ -7,8 +7,10 @@ import {
   AlertIcon,
   Box,
   Button,
+  Center,
   FormControl,
   FormLabel,
+  Heading,
   Input,
   Spinner,
 } from '@chakra-ui/react';
@@ -20,7 +22,6 @@ const LoginScreen = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
-  // for redirecting the user to a specific page after a login
   const redirect = location.search ? location.search.split('=')[1] : '/';
 
   const employeeLogin = useSelector(store => store.employeeLogin);
@@ -40,9 +41,18 @@ const LoginScreen = () => {
   }, [employeeInfo, navigate, redirect]);
 
   return (
-    <Box display="flex" justifyContent="center" height="100vh" padding="2rem">
-      
-      <Box width="300px">
+    <Center height="100vh" bg="teal.500">
+      <Box
+        width="300px"
+        p="6"
+        bg="white"
+        borderRadius="md"
+        boxShadow="md"
+        textAlign="center"
+      >
+        <Heading as="h1" marginBottom="5rem" color="teal.800">
+          Progressive International
+        </Heading>
         <FormControl marginBottom="1rem">
           <FormLabel>Email</FormLabel>
           <Input
@@ -65,16 +75,16 @@ const LoginScreen = () => {
           marginBottom="1rem"
           width="100%"
         >
-          {loading ? <Spinner /> : <Box>Login</Box>}
+          {loading ? <Spinner /> : 'Login'}
         </Button>
         {error && (
-          <Alert status="error">
+          <Alert status="error" borderRadius="md">
             <AlertIcon />
             {error}{' '}
           </Alert>
         )}
       </Box>
-    </Box>
+    </Center>
   );
 };
 
