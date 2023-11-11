@@ -19,7 +19,7 @@ export const updateProduct = createAsyncThunk(
         },
       };
       const { data } = await axios.put(
-        `/api/products/${product.id}`,
+        `https://progressive-backend.vercel.app/` +`/api/products/${product.id}`,
         product,
         config
       );
