@@ -16,7 +16,7 @@ export const createEmployee = createAsyncThunk(
           Authorization: `Bearer ${employeeInfo.token}`,
         },
       };
-      const { data } = await axios.post(`https://progressive-backend.vercel.app/` +`/api/admin`, newEmployee, config);
+      const { data } = await axios.post(`https://progressive-backend.vercel.app` +`/api/admin`, newEmployee, config);
       return data;
     } catch (error) {
       const newError =
