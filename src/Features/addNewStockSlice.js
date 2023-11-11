@@ -18,7 +18,7 @@ export const addNewStock = createAsyncThunk(
         },
       };
       const { data } = await axios.post(
-        `/api/employee/addNewStock`,
+        `https://progressive-backend.vercel.app/` +`/api/employee/addNewStock`,
         newStock,
         config
       );
