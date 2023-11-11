@@ -19,7 +19,7 @@ export const sellProducts = createAsyncThunk(
         },
       };
       const { data } = await axios.post(
-        `/api/products/sellProducts`,
+        `https://progressive-backend.vercel.app/` +`/api/products/sellProducts`,
         products,
         config
       );
