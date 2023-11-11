@@ -13,7 +13,7 @@ export const login = createAsyncThunk(
         },
       };
       const { data } = await axios.post(
-        `https://progressive-backend.vercel.app/` +`/api/employee/login`,
+        `https://progressive-backend.vercel.app` +`/api/employee/login`,
         { email, password },
         config
       );
