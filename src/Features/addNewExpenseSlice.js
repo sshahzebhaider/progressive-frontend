@@ -18,7 +18,7 @@ export const addNewExpense = createAsyncThunk(
         },
       };
       const { data } = await axios.post(
-        `https://progressive-backend.vercel.app/` +`/api/employee/addExpense`,
+        `https://progressive-backend.vercel.app` +`/api/employee/addExpense`,
         expenseDetails,
         config
       );
