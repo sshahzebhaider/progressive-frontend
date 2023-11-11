@@ -9,7 +9,7 @@ const initialState = {
 
 export const getProductList = createAsyncThunk('getProductList', async () => {
   try {
-    const { data } = await axios.get(`https://progressive-backend.vercel.app/` +`/api/products`);
+    const { data } = await axios.get(`https://progressive-backend.vercel.app` +`/api/products`);
     return data;
   } catch (error) {
     return error;
