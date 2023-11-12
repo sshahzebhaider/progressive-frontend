@@ -15,6 +15,8 @@ import {
   Spinner,
 } from '@chakra-ui/react';
 
+import backgroundImg from '../assets/images/maps.jpg'; // Update the path to your actual image
+
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -41,11 +43,16 @@ const LoginScreen = () => {
   }, [employeeInfo, navigate, redirect]);
 
   return (
-    <Center height="100vh" bg="#6ea7dc">
+    <Center
+      height="100vh"
+      bgImage={`url(${backgroundImg})`} // Set background image here
+      bgSize="cover"
+      bgPosition="center"
+    >
       <Box
         width="300px"
         p="6"
-        bg="white"
+        bg="rgba(255, 255, 255, 255)" // Set background color with transparency
         borderRadius="md"
         boxShadow="md"
         textAlign="center"
