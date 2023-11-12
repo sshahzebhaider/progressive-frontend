@@ -52,7 +52,7 @@ const LoginScreen = () => {
       <Box
         width="300px"
         p="6"
-        bg="rgba(255, 255, 255, 255)" // Set background color with transparency
+        bg="rgba(255, 255, 255, 0.8)" // Set background color with transparency
         borderRadius="md"
         boxShadow="md"
         textAlign="center"
