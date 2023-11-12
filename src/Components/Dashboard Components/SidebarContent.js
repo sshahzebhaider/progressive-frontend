@@ -121,6 +121,8 @@ const LinkItems = [
 ];
 const accountItems = [{ name: 'Profile', icon: FiUser, to: '/profile' }];
 
+// ... (your imports remain unchanged)
+
 const SidebarContent = () => {
   const location = useLocation();
   const loginPage = location.pathname === '/';
@@ -179,16 +181,22 @@ const SidebarContent = () => {
           fontFamily={'lato'}
           fontWeight={700}
           fontSize={'15px'}
+          boxShadow="2xl" // Add box shadow for a lifted look
         >
           <Flex
             h="20"
             alignItems="center"
-            mx="8"
-            justifyContent="space-between"
+            mx="14"
+            borderRadius="8px"
+            p="0"
           >
-            <Box>Progressive Internationals</Box>
+            <Box>
+              <Heading fontSize="24px" color="#000000">
+                Progressive International
+              </Heading>
+            </Box>
           </Flex>
-          <Box mt={5}>
+          <Box mt={1}>
             {employeeInfo.isAdmin
               ? LinkItems.filter(item => item.both || item.onlyAdmin).map(
                   link => (
@@ -256,9 +264,10 @@ const SidebarContent = () => {
         ml={'316px'}
         fontFamily={'lato'}
         color={'white'}
+        fontSize={'sm'}
       >
         {activeLink && (
-          <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', color: 'gray.500' }}>
             Pages /
             <Breadcrumb name={pageName} to={activeLink} />
           </div>
